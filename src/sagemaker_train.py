@@ -43,11 +43,11 @@ trial = Trial.create(trial_name = "TRAIL-{}".format(create_date),
 
 
 
-estimator = Estimator(image_uri='893136571605.dkr.ecr.us-east-1.amazonaws.com/pipeline:latest',
+estimator = Estimator(image_uri='576788201127.dkr.ecr.us-west-1.amazonaws.com/demo:latest',
                      role=role,
                      instance_count=1,
                      instance_type="ml.m5.xlarge",
-                     output_path = f"s3://github-pipeline-result/output/",
+                     output_path = f"s3://demopipelineworkflow/",
                      enable_sagemaker_metrics=True,
                      metric_definitions=metric_definitions)
 
