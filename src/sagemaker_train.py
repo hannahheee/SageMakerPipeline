@@ -20,7 +20,7 @@ from slack_notify import SlackBot
 sagemaker_session = sagemaker.Session(boto3.session.Session())
 
 # Put the right role and input data
-role = "arn:aws:iam::893136571605:role/github-workflow-action"
+role = "arn:aws:iam::576788201127:role/github-workflow-action"
 
 # Make sure the metric_definition and its regex
 metric_definitions=[
