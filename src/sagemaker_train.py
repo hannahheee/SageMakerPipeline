@@ -67,6 +67,9 @@ metrics_dataframe = TrainingJobAnalytics(training_job_name=training_job_name, me
 rr = ResultReport()
 rr.report(estimator.model_data, metrics_dataframe)
 
+
+#test
+
 slack_bot = SlackBot()
 slack_bot.success_send("Model Data:" + estimator.model_data)
 slack_bot.success_send("## Results\n" + metrics_dataframe.to_markdown())
