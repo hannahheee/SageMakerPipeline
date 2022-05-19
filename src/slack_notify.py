@@ -30,7 +30,6 @@ class SlackBot:
             msg = 'Please review pull request from {} at {}'.format(committer, pr_url)    
         self.client.chat_postMessage(channel=slack_channel, text = '<!channel> ' + msg )        
 
-
 if __name__ == "__main__":
     slack_bot = SlackBot()
     slack_bot.send()
