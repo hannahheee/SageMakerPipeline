@@ -121,4 +121,4 @@ jobs:
         run: |
           echo ${{ github.event.pull_request.body }}
           echo ${{ contains(github.event.pull_request.body, 'run_sagemaker') }}
-          python code/slack_notify.py 
+          python src/slack_notify.py 
