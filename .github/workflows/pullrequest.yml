@@ -26,7 +26,7 @@ env:
     PR_NUMBER: ${{ github.event.number }} # Only available for pr (no push)
     GITHUB_TOKEN: ${{ secrets.PR_TOKEN }}
     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-    SLACK_CHANNEL: hack-spot-hero
+    SLACK_CHANNEL: topn-pipeline
          
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
