@@ -59,8 +59,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::893136571605:role/github-workflow-action
-          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::576788201127:role/github-workflow-action
+          aws-region: us-west-1
           role-duration-seconds: 7200
           
       - name: Login to Amazon ECR
@@ -78,7 +78,7 @@ jobs:
 
       - name: Run a training script
         run: |
-          python code/sagemaker_train.py
+          python src/sagemaker_train.py
 
       - name: Run on failure or cancelled
         if: ${{ failure() || cancelled() }}
@@ -88,7 +88,7 @@ jobs:
           JOB_STATUS: ${{ job.status }}
           PR_URL: ${{ github.event.pull_request._links.html.href }}
         run:
-          python code/slack_notify.py  
+          python src/slack_notify.py  
 
   pr_review_notify:
     runs-on: ubuntu-latest
