@@ -1,0 +1,9 @@
+pylint==2.13.8
+sagemaker
+sagemaker-experiments
+pandas
+PyGithub
+tabulate
+pytest
+flake8
+slackclient
